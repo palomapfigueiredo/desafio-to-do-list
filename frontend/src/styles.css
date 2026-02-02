@@ -1,0 +1,159 @@
+:root {
+  --primary: #6366f1;
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary);
+} 
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/*formulario*/
+.task-form {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task-form h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  background: #334155;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+  border-color: transparent;
+}
+
+/*botoes*/
+button {
+  cursor: pointer;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #4f46e5;
+}
+
+.btn-delete {
+  background: transparent;
+  color: var(--danger);
+}
+
+.btn-delete:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.btn-check {
+  background: transparent;
+  color: var(--success);
+}
+
+.btn-check:hover {
+  background: rgba(34, 197, 94, 0.15);
+}
+
+/*lista de tarefas*/
+.task-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+}
+
+/*informações da tarefa*/
+.task-info {
+  flex: 1;
+}
+
+.task-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.task-info p {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/*acoes da tarefa*/ 
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/*acoes quando a tarefa é concluída*/
+.task-card.completed {
+  opacity: 0.6;
+}
+
+.task-card.completed h3 {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
