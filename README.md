@@ -50,7 +50,7 @@ desafio-to-do-list/
 │   │   ├── models.py
 │   │   ├── schemas.py
 │   │   ├── database.py
-│   │   └── routes/
+│   │   └── routers/
 │   └── tarefas.db
 │
 ├── frontend/
